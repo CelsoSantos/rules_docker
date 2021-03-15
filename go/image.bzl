@@ -50,14 +50,14 @@ def repositories():
         container_pull(
             name = "go_image_base",
             registry = "gcr.io",
-            repository = "distroless/base",
+            repository = "distroless/base-debian10",
             digest = BASE_DIGESTS["latest"],
         )
     if "go_debug_image_base" not in excludes:
         container_pull(
             name = "go_debug_image_base",
             registry = "gcr.io",
-            repository = "distroless/base",
+            repository = "distroless/base-debian10",
             digest = BASE_DIGESTS["debug"],
         )
     if "go_image_static" not in excludes:
